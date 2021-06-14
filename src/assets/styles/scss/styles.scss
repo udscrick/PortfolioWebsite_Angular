@@ -1,1 +1,12 @@
 @use 'custom'; //importing the custom scss file
+
+//Import the components
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
+
+//Import the sections
+@use 'sections/navbar';
+@use 'sections/about';
+@use 'sections/footer';
