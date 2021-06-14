@@ -31,9 +31,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/assets/styles/styles.sass"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           },
           "configurations": {
             "production": {
@@ -55,6 +57,11 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "stylePreprocessorOptions": {
+                "includePaths": [
+                  "./assets/styles/scss"
+                ]
+              },
               "outputHashing": "all"
             },
             "development": {
@@ -99,7 +106,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/assets/styles/styles.sass"
             ],
             "scripts": []
           }
