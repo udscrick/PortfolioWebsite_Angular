@@ -11,7 +11,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
     HeaderComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
   providers: [],
