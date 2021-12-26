@@ -10,7 +10,7 @@
     "dev:ssr": "ng run UMOfficialUI:serve-ssr",
     "serve:ssr": "node dist/UMOfficialUI/server/main.js",
     "build:ssr": "ng build && ng run UMOfficialUI:server",
-    "runssr":"npm run build:ssr && npm run serve:ssr",
+    "runssr": "npm run build:ssr && npm run serve:ssr",
     "prerender": "ng run UMOfficialUI:prerender"
   },
   "private": true,
@@ -26,6 +26,7 @@
     "@angular/router": "~12.0.4",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@nguniversal/express-engine": "^12.0.1",
+    "@types/jquery": "^3.5.5",
     "autoprefixer": "^9.8.6",
     "bootstrap": "^5.0.1",
     "express": "^4.15.2",
