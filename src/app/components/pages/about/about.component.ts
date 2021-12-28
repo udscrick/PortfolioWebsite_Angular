@@ -10,12 +10,14 @@ export class AboutComponent implements OnInit {
 
    typewriter_text: string = "I am a full stack, cross-platform web and app developer.";
  typewriter_display: string = "";
+  showResumeButton: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
       this.typingCallback(this);
       var app = document.getElementById('desc');
+    
 
 var typewriter = new Typewriter(app, {
   loop: false,
@@ -26,7 +28,7 @@ typewriter
   .typeString(this.typewriter_text)
   .pauseFor(2000)
   .deleteAll()
-  .typeString('I make websites and mobile applications that work on all kinds of devices!')
+  .typeString('I make websites and mobile apps that work on all kinds of devices!')
   .start();
 
 // typewriter.stop()
@@ -41,6 +43,21 @@ typewriter
       setTimeout(that.typingCallback, 1000, that);
     } else {
       that.typewriter_display = "";
+    }
+  }
+  onViewClick(val:any){
+    window.open('assets/pdf/uday_menon_cv.pdf')
+
+  }
+  onSocialsClick(val:string){
+    if(val=='l'){
+      window.open('https://www.linkedin.com/in/udayvmenon/')
+    }
+    if(val=='g'){
+      window.open('https://github.com/udscrick')
+    }
+    if(val=='f'){
+      window.open('https://www.facebook.com/killerinstinct95/')
     }
   }
 

@@ -380,4 +380,56 @@ h4 {
     left: 36px;
   }
 }
+.logoimg{
+  max-width: 50%;
+}
+.imgcontainer{
+  max-width: 300px;
+}
+
+@media screen and  (max-width: 480px) {
+  .coverimg{
+      max-width: 50%;
+  }
+  .logoimg{
+      max-width: 25%;
+  }
+  .imgcontainer{
+    max-width: 250px;
+  }
+  
+}
+@media screen and (min-width:480px) and (max-width: 768px) {
+  .coverimg{
+      max-width: 50%;
+  }
+  .logoimg{
+      max-width: 25%;
+  }
+  .imgcontainer{
+    max-width: 250px;
+  }
+}
+@media screen and (min-width:768px) and (max-width: 1024px) {
+  .coverimg{
+      max-width: 75%;
+  }
+  .logoimg{
+      max-width: 50%;
+  }
+  .imgcontainer{
+    max-width: 300px;
+  }
+}
+@media screen and (min-width:1024px) and (max-width: 1200px) {
+  .coverimg{
+      max-width: 75%;
+  }
+  .logoimg{
+      max-width: 50%;
+  }
+  .imgcontainer{
+    max-width: 300px;
+  }
+}
 
