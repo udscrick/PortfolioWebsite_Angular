@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { BlobButtonComponent } from './components/reusable/blob-button/blob-button.component';
 import { HoverButtonComponent } from './components/reusable/hover-button/hover-button.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HoverButtonComponent } from './components/reusable/hover-button/hover-b
     HeaderComponent,
     AboutComponent,
     BlobButtonComponent,
-    HoverButtonComponent
+    HoverButtonComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
