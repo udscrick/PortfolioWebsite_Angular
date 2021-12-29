@@ -98,7 +98,7 @@ export class SkillsComponent implements OnInit {
       ]
     },
     {
-      name: "Design&Presentation",
+      name: "Design",
       iconclass:'uil-palette',
       subskills:[
         {
@@ -108,10 +108,6 @@ export class SkillsComponent implements OnInit {
         {
           name:"Figma",
           level: "70%"
-        },
-        {
-          name:"PowerPoint",
-          level: "95%"
         },
         {
           name:"Photoshop",
@@ -151,6 +147,10 @@ export class SkillsComponent implements OnInit {
         {
           name:"Kafka",
           level:"70%"
+        },
+        {
+          name:"PowerPoint",
+          level: "95%"
         },
       ]
     }
