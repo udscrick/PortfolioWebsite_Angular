@@ -1,10 +1,37 @@
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { event } from 'jquery';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  styleUrls: ['./skills.component.css'],
+  animations:[
+    trigger('fadeSlideInOut', [
+      transition(':enter', [
+        query(':enter',[
+          style({ opacity: 0}),
+          stagger('100ms',[
+            animate('500ms', style({ opacity: 1})),
+          ])
+        
+        ])
+        
+      ]),
+      // transition(':leave', [
+      // 	animate('500ms', style({ opacity: 0, transform: 'translateY(10px)' })),
+      // ]),
+    ]),
+    trigger('fadeSlideInOutAnim', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(10px)' }),
+        animate('500ms', style({ opacity: 1, transform: 'translateY(0)' })),
+      ]),
+      transition(':leave', [
+        animate('500ms', style({ opacity: 0, transform: 'translateY(10px)' })),
+      ]),
+    ]),
+  ]
 })
 export class SkillsComponent implements OnInit {
   skillsContent:any;

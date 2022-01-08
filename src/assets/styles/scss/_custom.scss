@@ -49,8 +49,12 @@ $yellow: #F4D244;
 // $secondary:#8DA242;
 
 //Orange Black Theme
-$primary: #fe5f75;
-$secondary: #fc9842;
+$primary: hsl(352, 99%, 68%);
+$primary-shade:hsl(352, 99%, 68%);
+$primary-dark:hsl(352, 69%, 61%);
+$primary-alt:hsl(352, 87%, 56%);
+
+$secondary: hsl(28, 97%, 62%);
 
 
 //we can also copy variables of any bootstrap component or even change the icons eg:accordion
@@ -73,3 +77,14 @@ $accordion-button-focus-box-shadow:      none;
 
 
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+:root{
+    --primary-color: hsl(352, 99%, 68%);
+    --primary-shade:hsl(352, 99%, 68%);
+--primary-dark:hsl(352, 69%, 61%);
+--primary-alt:hsl(352, 87%, 56%);
+
+
+--secondary: hsl(28, 97%, 62%);
+--title-color:hsl(352, 8%, 15%);
+}

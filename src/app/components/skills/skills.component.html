@@ -139,7 +139,7 @@
             </div>
           </div>
       </div> -->
-      <div class="accordion accordion-flush panel panel-default" id="accordionExample">
+      <div class="accordion accordion-flush panel panel-default" id="accordionExample" @fadeSlideInOut>
         <div class="accordion-item " *ngFor="let skill of skills;let i=index">
             <h2 class="accordion-header" [id]="'heading'+i">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i" aria-expanded="true" [attr.aria-controls]="'collapse'+i">
@@ -153,9 +153,9 @@
               </button>
             </h2>
             
-            <div [id]="'collapse'+i" class="accordion-collapse collapse" [ngClass]="i==0? 'show' : ''" [attr.aria-labelledby]="'heading'+i" data-bs-parent="#accordionExample"> 
+            <div [id]="'collapse'+i" class="accordion-collapse collapse fade" [ngClass]="i==0? 'show' : ''" [attr.aria-labelledby]="'heading'+i" data-bs-parent="#accordionExample" > 
                 <!-- <div [id]="'collapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+i" [ngClass]="i==0? 'show' : ''"> -->
-              <div class="accordion-body">
+              <div class="accordion-body" >
                 <div class="skills_list grid">
                     <div class="skills_data" *ngFor="let subskill of skill.subskills">
                       <div class="skills_title">

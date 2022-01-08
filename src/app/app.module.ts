@@ -8,6 +8,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { BlobButtonComponent } from './components/reusable/blob-button/blob-button.component';
 import { HoverButtonComponent } from './components/reusable/hover-button/hover-button.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { SkillsComponent } from './components/skills/skills.component';
     AboutComponent,
     BlobButtonComponent,
     HoverButtonComponent,
-    SkillsComponent
+    SkillsComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
