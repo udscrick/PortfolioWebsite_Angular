@@ -1,6 +1,6 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { event } from 'jquery';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-skills',
@@ -182,11 +182,19 @@ export class SkillsComponent implements OnInit {
       ]
     }
   ]
-  constructor() { }
+  deviceInfo: any;
+  isDesktopDevice: boolean = false;
+  isTablet: boolean = false;
+  isMobile: boolean = false;
+  constructor(private deviceService: DeviceDetectorService) { }
 
   ngOnInit(): void {
   this.skillsContent = document.getElementsByClassName('skills_content')
     this.skillHeader = document.querySelectorAll('.skills_header')
+    this.deviceInfo = this.deviceService.getDeviceInfo();
+    this.isMobile = this.deviceService.isMobile();
+    this.isTablet = this.deviceService.isTablet();
+    this.isDesktopDevice = this.deviceService.isDesktop();
   }
 
   toggleSkills(evnt:any){

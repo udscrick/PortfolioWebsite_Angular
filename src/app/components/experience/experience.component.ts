@@ -36,6 +36,7 @@ trigger('fadeInGrow', [
 })
 export class ExperienceComponent implements OnInit {
   activetabcontent: string = 'edu';
+  shown='hover'
   education = [ {
     title: 'Computer Engineering',
     place: 'University Of Mumbai',

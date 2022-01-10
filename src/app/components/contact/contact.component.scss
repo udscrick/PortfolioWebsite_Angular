@@ -1,0 +1,52 @@
+.contact .info-box {
+    color: var(--secondary);
+    padding: 20px;
+    width: 100%;
+    background: white
+    }
+
+.contact .info-box i.bx{
+    font-size: 26px;
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 14px;
+    float: left;
+    background: rgba(0,0,0,0.1);
+}
+.contact .info-box h3{
+    font-size: 20px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin: 10px 0 8px 68px;
+}
+
+.contact .info-box p{
+    padding: 0;
+    color: var(--secondary);
+    line-height: 24px;
+    font-size: 14px;
+    margin: 0 0 0 68px;
+}
+
+.contact .info-box .social-links{
+  margin-top: 5px;
+  margin-left: 68px;
+}
+
+.contact .info-box .social-links a{
+  font-size: 20px;
+  display: inline-block;
+  color: var(--primary-shade);
+  line-height: 1;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.contact .info-box .social-links a:hover{
+    color: var(--secondary);
+}
+
+.contact form{
+    padding: 30px;
+    // background: var(--secondary);
+}

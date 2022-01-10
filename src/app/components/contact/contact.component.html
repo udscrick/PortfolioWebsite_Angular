@@ -1,0 +1,76 @@
+<ng-scrollbar style="height: 100vh" [visibility]="'hover'">
+  <section id="contact" class="intro-section contact">
+    <div class="container" style="padding-bottom: 50px;">
+      
+      <div class="row mt-2">
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx uil uil-house-user"></i>
+            <h3>Address</h3>
+            <p>My add is</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx uil uil-at"></i>
+            <h3>Socials</h3>
+            <div class="social-links">
+              <a class="linkedin"><i class="uil uil-linkedin"></i></a>
+              <a class="github"><i class="uil uil-github"></i></a>
+              <a class="facebook"><i class="uil uil-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch mb-4">
+          <div class="info-box">
+            <i class="bx uil uil-envelope"></i>
+            <h3>Email</h3>
+            <p>udayvmenon@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch mb-4">
+          <div class="info-box">
+            <i class="bx uil uil-phone"></i>
+            <h3>Phone</h3>
+            <p>+918104912917</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form [formGroup]="contactForm">
+          <div class="section-title">
+            <h2>Contact</h2>
+            <p>Get in Touch</p>
+          </div>
+          <div class="form-row row mb-4">
+            <div class="col-md-6 form-group mb-4">
+              <input type="text" class="form-control" id="name" placeholder="Enter name" formControlName="name">
+              <div class="validate">
+              </div>
+
+            </div>
+            <div class="col-md-6 form-group mb-4">
+              <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+              <div class="validate">
+              </div>              
+            </div>
+            <div class="form-group mb-4">
+              <input type="text" class="form-control" id="subject" placeholder="Subject" formControlName="subject">
+              <div class="validate">
+              </div>              
+            </div>
+            <div class="form-group mb-4">
+              <textarea class="form-control" id="message" placeholder="How can I be of service?" formControlName="message"></textarea>
+              <div class="validate">
+              </div>              
+            </div>
+            <div class="text-center mb-4">
+              <button type="submit" (click)="onClickSend()">Send</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</ng-scrollbar>
