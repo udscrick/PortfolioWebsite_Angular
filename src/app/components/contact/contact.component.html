@@ -7,7 +7,11 @@
           <div class="info-box">
             <i class="bx uil uil-house-user"></i>
             <h3>Address</h3>
-            <p>My add is</p>
+            <div style="display: flex;flex-direction: row;margin-left: 68px;">
+              <i class="uil uil-location-point"></i>
+              <p style="margin-left: 0;">Vashi, Navi Mumbai</p>
+            </div>
+            
           </div>
         </div>
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
@@ -15,9 +19,9 @@
             <i class="bx uil uil-at"></i>
             <h3>Socials</h3>
             <div class="social-links">
-              <a class="linkedin"><i class="uil uil-linkedin"></i></a>
-              <a class="github"><i class="uil uil-github"></i></a>
-              <a class="facebook"><i class="uil uil-facebook-f"></i></a>
+              <a class="linkedin" (click)="onSocialsClick('l')"><i class="uil uil-linkedin"></i></a>
+              <a class="github" (click)="onSocialsClick('g')"><i class="uil uil-github"></i></a>
+              <a class="facebook" (click)="onSocialsClick('f')"><i class="uil uil-facebook-f"></i></a>
             </div>
           </div>
         </div>
@@ -39,8 +43,8 @@
       <div>
         <form [formGroup]="contactForm">
           <div class="section-title">
-            <h2>Contact</h2>
-            <p>Get in Touch</p>
+            <h2 style="color: white;">Contact</h2>
+            <!-- <p>Get in Touch</p> -->
           </div>
           <div class="form-row row mb-4">
             <div class="col-md-6 form-group mb-4">
@@ -65,7 +69,8 @@
               </div>              
             </div>
             <div class="text-center mb-4">
-              <button type="submit" (click)="onClickSend()">Send</button>
+              <!-- <button type="submit" (click)="onClickSend()">Send</button> -->
+              <button type="button" class="btn btn-light" (click)="onClickSend()">Send</button>
             </div>
 
           </div>

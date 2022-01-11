@@ -1,0 +1,59 @@
+<ng-scrollbar style="height: 100vh" [visibility]="'hover'">
+  <section id="portfolio" class="intro-section portfolio">
+    <div>
+      <!-- <div style="background: white;padding: 1em; width:10%;"> -->
+      <span class="badge bg-light" style="font-size: 1.2rem;color: var(--secondary);">Publications</span>
+      <!-- </div> -->
+      <div class="row m-4">
+        <div class="col-md-4 ">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Intelligent And Prognostic Parking System</h5>
+              <h6 class="card-subtitle mb-2 text-muted">IAETSD JOURNAL FOR ADVANCED RESEARCH IN APPLIED SCIENCES · Apr
+                12, 2018</h6>
+              <p class="card-text">
+                This paper proposes an automated smart parking system that utilizes data collected from the sensors,
+                along with historical data to create a predictive model to forecast parking behavior and book slots in
+                advance. </p>
+              <a href="#" class="card-link">View Abstract</a>
+              <a href="#" class="card-link">Download Paper</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+        <!-- <div style="background: white;padding: 1em; width:10%;"> -->
+        <span class="badge bg-light" style="font-size: 1.2rem;color: var(--secondary);">Projects</span>
+        <!-- </div> -->
+        <div class="row m-4">
+          <div class="col-md-4" *ngFor="let project of projects;let i=index">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{project?.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{project?.role}}</h6>
+                <p class="card-text">
+                  {{project?.description}} </p>
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                    Tooltip on top
+                  </button>
+                  <div style="display: flex;flex-direction: row;">
+                <a class="card-link" style="width: 50%;cursor: pointer;" *ngIf="project?.sitelink" (click)="onSiteClick(project?.sitelink)">View Site</a>
+                <div style="margin-left: auto;display: flex;flex-direction: row;    flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;">
+                  <span class="me-2">Built With: </span>
+                  <div class="w-5 me-2" *ngFor="let tool of project?.tools;let j=index">
+                    <img src="assets/img/{{tool}}.png">
+                  </div>
+                  
+                 
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</ng-scrollbar>
