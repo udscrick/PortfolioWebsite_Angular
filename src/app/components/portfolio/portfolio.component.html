@@ -1,0 +1,86 @@
+<ng-scrollbar style="height: 100vh" [visibility]="'hover'">
+  <section id="portfolio" class="intro-section portfolio">
+    <div>
+      <!-- <div style="background: white;padding: 1em; width:10%;"> -->
+      <span class="badge bg-light" style="font-size: 1.2rem;color: var(--secondary);">Publications</span>
+      <!-- </div> -->
+      <div class="row m-4">
+        <div class="col-md-4 ">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Intelligent And Prognostic Parking System</h5>
+              <h6 class="card-subtitle mb-2 text-muted">IAETSD JOURNAL FOR ADVANCED RESEARCH IN APPLIED SCIENCES · Apr
+                12, 2018</h6>
+              <p class="card-text">
+                This paper proposes an automated smart parking system that utilizes data collected from the sensors,
+                along with historical data to create a predictive model to forecast parking behavior and book slots in
+                advance. </p>
+              <a href="#" class="card-link">View Abstract</a>
+              <a href="#" class="card-link">Download Paper</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+        <!-- <div style="background: white;padding: 1em; width:10%;"> -->
+        <span class="badge bg-light" style="font-size: 1.2rem;color: var(--secondary);">Projects</span>
+        <!-- </div> -->
+        <div class="row m-4">
+          <div class="col-md-4 mb-4" *ngFor="let project of projects;let i=index">
+            <div class="card">
+              <div class="card-body">
+                <div style="display: flex;flex-direction: row;">
+                  <h5 class="card-title">{{project?.name}}</h5>
+                  <span class="badge rounded-pill bg-primary" 
+                  *ngIf="project?.company"
+                  style="display:flex;flex-direction: row; align-items: center;justify-content: flex-end;margin-left: auto;">
+                  {{project?.company}}</span>
+                </div>
+               
+                <h6 class="card-subtitle mb-2 text-muted">{{project?.role}}</h6>
+                <!-- <h6 class="card-subtitle mb-2 text-muted" *ngIf="project?.company">{{project?.company}}</h6> -->
+                <p class="card-text">
+                  {{project?.description}} </p>
+                  
+                  <div style="display: flex;flex-direction: row;">
+                <a class="card-link" style="width: 50%;cursor: pointer;" *ngIf="project?.sitelink" (click)="onSiteClick(project?.sitelink)">{{project?.viewsitetext}}</a>
+                <a class="card-link" style="width: 50%;cursor: pointer;" *ngIf="project?.details" (click)="onDetailsClick(project?.name)">{{project?.details}}</a>
+                <div style="margin-left: auto;display: flex;flex-direction: row; 
+                align-items: center;
+                justify-content: flex-end;">
+                  <span class="me-2">Built Using: </span>
+                  <div class="w-5 me-2" *ngFor="let tool of project?.tools;let j=index" tooltip="{{tool}}"
+                  placement="top" >
+                    <img src="assets/img/{{tool}}.png">
+                  </div>
+                  
+                 
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</ng-scrollbar>
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{modaltitle}}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" style="display: flex;flex-direction: column;">
+    <span>{{modaldetails?.description}}</span>
+    <span *ngIf="modaldetails?.roles?.length>0" style="margin-top: 15px;">Responsibilities: </span>
+    <ul *ngIf="modaldetails?.roles?.length>0">
+      <li *ngFor="let role of modaldetails?.roles;let i=index">
+        {{role}}
+      </li>
+    </ul>
+  </div>
+</ng-template>

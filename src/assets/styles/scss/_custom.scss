@@ -37,16 +37,54 @@ $yellow: #F4D244;
 // $secondary:     $pink;
 
 //Orange Yellow Theme
-$primary:       $orange;
-$secondary:     $yellow;
+// $primary:       $orange;
+// $secondary:     $yellow;
+
+//Blue Theme
+// $primary: #00ABE1;
+// $secondary: #161F6D;
+
+//Green Theme
+// $primary:#A7BC5B;
+// $secondary:#8DA242;
+
+//Orange Black Theme
+$primary: hsl(352, 99%, 68%);
+$primary-shade:hsl(352, 99%, 68%);
+$primary-dark:hsl(352, 69%, 61%);
+$primary-alt:hsl(352, 87%, 56%);
+
+$secondary: hsl(28, 97%, 62%);
+
 
 //we can also copy variables of any bootstrap component or even change the icons eg:accordion
 
-$accordion-icon-color:                    $primary;
-$accordion-icon-active-color:             $secondary;
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+$accordion-icon-color:                    white;
+$accordion-icon-active-color:             white;
+$accordion-color: transparent;
+$accordion-bg: transparent;
+$accordion-button-bg: transparent;
+$accordion-button-active-bg:transparent;
+$accordion-button-active-color:white;
+$accordion-button-color:  white;
+$accordion-border-width:  0px;
+$accordion-button-focus-border-color:    white;
+$accordion-button-focus-box-shadow:      none;
+
+// $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#6563ff' d='M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z'/></svg>");
+// $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#6563ff' d='M17,13.41,12.71,9.17a1,1,0,0,0-1.42,0L7.05,13.41a1,1,0,0,0,0,1.42,1,1,0,0,0,1.41,0L12,11.29l3.54,3.54a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29A1,1,0,0,0,17,13.41Z'/></svg>");
 
 
 
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+:root{
+    --primary-color: hsl(352, 99%, 68%);
+    --primary-shade:hsl(352, 99%, 68%);
+--primary-dark:hsl(352, 69%, 61%);
+--primary-alt:hsl(352, 87%, 56%);
+
+
+--secondary: hsl(28, 97%, 62%);
+--title-color:hsl(352, 8%, 15%);
+}

@@ -34,9 +34,9 @@
               "src/assets/styles/styles.sass"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",  
-              "./node_modules/popper.js/dist/umd/popper.min.js",  
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"  
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -49,8 +49,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "5kb",
+                  "maximumError": "10kb"
                 }
               ],
               "fileReplacements": [
@@ -176,6 +176,18 @@
             }
           },
           "defaultConfiguration": "production"
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": true,
+            "ssr": false,
+            "browserTarget": "UMOfficialUI:build:production",
+            "firebaseProject": "um-official-ui",
+            "firebaseHostingSite": "um-official-ui",
+            "serverTarget": "UMOfficialUI:server:production",
+            "prerenderTarget": "UMOfficialUI:prerender:production"
+          }
         }
       }
     }

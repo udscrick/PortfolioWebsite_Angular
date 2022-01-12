@@ -1,0 +1,94 @@
+{
+    "r-world":{
+        "description":"A headless CMS platform to allow employees to view and register for different company events, view latest company news and social media updates & also allow the employees to update their daily Covid Symptom Checks. ",
+        "roles":[
+            "Regular communications with all the stakeholders to identify the features&requirements",
+            "Worked with the design team to identify the appropriate design in accordance with UI/UX principles",
+            "Create a UI architecture that facilitates real-time updation of data",
+            "Enable push notifications to provide users with the latest news/event updates",
+            "CI/CD using Azure Devops Pipeline"
+        ]
+    },
+    "foodandbeverages":{
+        "description":"An application that allows the employees of Reliance Industries to prebook meals in canteens/restaurants within the office campuses spread accross the country. Additionally, there is also a seperate application for the vendors and the admin to register and manage canteen/restaurant data and handle incoming orders",
+        "roles":[
+            "Lead a team of UI developers to rollout the application in an Agile manner in different phases",
+            "Worked closely with the business/product owners to identify the requirements and plan the actionable items",
+            "Structured and developed components for the project using various front-end technologies",
+            "Key aspects of development contribution on include, integration of payment portal, integration of meal booking CRUD operations,full stack development of vendor portal to register and manage the vendors",
+            "CI/CD using Azure Devops Pipeline"
+        ]
+    },
+    "conferenceroombookingsystem":{
+        "description":"A portal designed to enable the employees to beeok meeting/conference rooms in office campuses across the nation, and to also allow them to book meal/pantry items during the meetings",
+        "roles":[
+            "Complete end to end front end development in Angular,HTML&CSS",
+            "Optimization of UI development by creating reusable components.",
+            "Created a micro front-end architechture to enable structural&logical seperation of corporate applications & portals.",
+            "Work closely with the product owners and other stakeholders to identify and provide phasewise deliverables",
+            "CI/CD using Azure Devops Pipeline"
+        ]
+    },
+    "carpool":{
+        "description":"A portal for employees to search for and book rides for any business or emergency commute. The admins can also approve ride requests, allocate drivers based on their availability and also rechedule rides.",
+        "roles":[
+            "Worked with one other UI developer to ensure complete end to end front end development in Angular,HTML&CSS",
+            "Use of GooleMaps API to track ride and select locations",
+            "Constantly follow up with the stakeholders to obtain feedback and identify enhancements/new requirements",
+            "Optimization of API integrations by implementing asynchronous calls and efficient token management",
+            "CI/CD using Azure Devops Pipeline"
+        ]
+    },
+    "enterprisedataautomation":{
+        "description":"A to automate several enterprise processes such as raising & allocation of tickets, allocation and approval of VMs, dashboard to show metrics of various enterprise processes, creation and allocation of employee ids",
+        "roles":[
+            "Worked closely with all the departments in the organization that required automation of any of their processes to determine the possibilities and constraints of the automations",
+            "End to end UI development for all the automation processes",
+            "Created reusable services and components to optimize UI development",
+            "Implemented role based access architecture to ensure the automations/pages are accessible only to the concerned stakeholders",
+            "Developed some microservices for basic CRUD operations, using NodeJS",
+            "CI/CD using Azure Devops Pipeline"
+        ]
+    },
+    "ocrfilereader":{
+        "description":"A OCR document reader that processes the data in physical files, converts them to their digital form and then make this data available for further processing by ML models and other business processes",
+        "roles":[
+            "Created an application using python that extracted data from scanned documents",
+            "Used R to preprocess the extracted data and make it available to ML models and other business processes",
+            "Worked closely with the stakeholders in order to obtain a large data set to optimize the self learning ML Model",
+            "Trained the ML model with the data and tried different ML algorithms in order to determine the ideal model for the given data."
+        ]
+    },
+    "socialapp":{
+        "description":"A prototype that allows users to connect with each other based on certain predetermined factors such as age, interests and location",
+        "roles":[
+            "Created a cross platform application using react native.",
+            "Devised an efficient matching algorithm to match compatible users",
+            "Wrote microservices using Node/ExpressJS and integrated these with MongoDb",
+            "Utilized Google Maps APIs for implementing location based logic in the algorithm"
+        ]
+    },
+    "e-commerceapp":{
+        "description":"An ecommerce app prototype that allows users to search for desired items/groceries from different vendors and pay using desired payment method",
+        "roles":[
+            "Created a cross platform application using react native.",
+            "Wrote microservices using Node/ExpressJS and integrated these with MongoDb"
+            
+        ]
+    },
+    "vmnetwork":{
+        "description":"A network of linux based virtual machines created on a bare metal server with the help of VMWare Workstation,VirtualBox and shell scrpting to allow all the students of the college to access documents and software remotely using this Saas(Software as a Service) architecture."
+    },
+    "spammaildetection":{
+        "description":"A ML model created using NLP and Naive Bayes Classification techniques in order to classify mails/text as spam and further categorized into deifferenty types of spam(ads,credit cards,housing etc.)"
+    },
+    "distributedmultiplexbookingsystem":{
+        "description":"An application prototype to demonstrate the usage of distributed databases. The application has a ticket booking front end built using Angular, and a backend built using firebase and its nosql firestore database. Additional nosql mongoDBs were created in order to persist the data accross different databases and work in accordance with the principles of distributed databases"
+    },
+    "clipboardutilitysystem":{
+        "description":"A software developed using python&shell scripting that can access the windows clipboard and tweak its functionality so as to enable it to have additional features such as multi copy-paste, viewing clipboard history and the option to toggle the clipboard on/off."
+    },
+    "eventmanagementwebsite":{
+        "description":"A prototype website built using Angular,MySQL and PHP that allows a user to browse through various event details, photos and viedeos. It also allows a user to book an event planner for their own personal events."
+    }
+}

@@ -10,3 +10,12 @@
 @use 'sections/navbar';
 @use 'sections/about';
 @use 'sections/footer';
+
+
+body ::-webkit-scrollbar {
+    display: none;
+  }
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

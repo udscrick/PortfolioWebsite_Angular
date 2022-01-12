@@ -1,0 +1,80 @@
+<ng-scrollbar style="height: 100vh" [visibility]="'hover'">
+<section id="home" class="intro-section qualification section">
+  <div class="container" style="padding-bottom: 50px;">
+
+  
+
+    <!-- <h2 class="section_title">Education & Experience</h2> -->
+    <div class="qualification_container">
+      <div class="qualification_tabs">
+        <div class="qualification_button button-flex" (click)="onShowContent('edu')" [ngClass]="{'active':activetabcontent=='edu'}">
+          <i class="uil uil-graduation-cap qualification_icon"></i>
+          Education
+        </div>
+        <div class="qualification_button button-flex" (click)="onShowContent('work')" [ngClass]="{'active':activetabcontent=='work'}">
+          <i class="uil uil-briefcase-alt"></i>
+          Work
+        </div>
+      </div>
+      <div class="qualification_sections">
+        <div class="qualification_content" *ngIf="activetabcontent=='edu'" @fadeSlideInOut>
+          <div class="qualification_data" *ngFor="let item of education;let i=index">
+            <div *ngIf="i%2!=0"></div>
+            <div *ngIf="i%2!=0">
+              <span class="qualification_rounder" >{{item?.toyear}}</span>
+              <!-- <span class="qualification_line"></span> -->
+            </div>
+            <div class="card cardpdng" style="position: relative;" [ngClass]="{'right':i%2==0,'left':i%2!=0}" > 
+              
+              <h3 class="qualification_title">
+                {{item?.title}}
+              </h3>
+              <span class="qualification_subtitle">
+                {{item?.place}}
+              </span>
+              <div class="qualification_calendar">
+                <i class="uil uil-calendar-alt"></i>
+                {{item?.fromyear}}-{{item?.toyear}}
+              </div>
+            </div>
+            <div *ngIf="i%2==0">
+              <span class="qualification_rounder" >{{item?.toyear}}</span>
+              <!-- <span class="qualification_line"></span> -->
+            </div>
+          </div>
+          
+
+        </div>
+        <div class="qualification_content" *ngIf="activetabcontent=='work'" @fadeSlideInOut>
+          <div class="qualification_data" *ngFor="let item of workexperiences;let i=index">
+            <div *ngIf="i%2!=0"></div>
+            <div *ngIf="i%2!=0">
+              <span class="qualification_rounder" >{{item?.fromyear}}</span>
+              <!-- <span class="qualification_line"></span> -->
+            </div>
+            <div class="card cardpdng" style="position: relative;" [ngClass]="{'right':i%2==0,'left':i%2!=0}" > 
+              
+              <h3 class="qualification_title">
+                {{item?.title}}
+              </h3>
+              <span class="qualification_subtitle">
+                {{item?.place}}
+              </span>
+              <div class="qualification_calendar">
+                <i class="uil uil-calendar-alt"></i>
+               <span *ngIf="item?.toyear"> {{item?.fromyear}}-{{item?.toyear}}</span>
+               <span *ngIf="!item?.toyear"> {{item?.fromyear}}</span>
+              </div>
+            </div>
+            <div *ngIf="i%2==0">
+              <span class="qualification_rounder" >{{item?.fromyear}}</span>
+              <!-- <span class="qualification_line"></span> -->
+            </div>
+          </div>
+  
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+</ng-scrollbar>
