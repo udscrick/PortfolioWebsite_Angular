@@ -1,19 +1,9 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
+import FIREBASECONFIG from '../assets/data/firebaseconfig.json' //Create this file in your local system as this will be ignored during gir push
 export const environment = {
-  firebase: {
-    projectId: 'um-official-ui',
-    appId: '1:128997766528:web:7ea96e05664d68f8ebfd65',
-    databaseURL: 'https://um-official-ui.firebaseio.com',
-    storageBucket: 'um-official-ui.appspot.com',
-    locationId: 'us-central',
-    apiKey: 'AIzaSyAgEN4DtxXxt6dSvRl31P8B68ssejHdubk',
-    authDomain: 'um-official-ui.firebaseapp.com',
-    messagingSenderId: '128997766528',
-    measurementId: 'G-403NJ19F2Y',
-  },
+  firebase: FIREBASECONFIG,
   production: false
 };
 
