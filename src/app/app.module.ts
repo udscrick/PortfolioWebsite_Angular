@@ -19,6 +19,8 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { BsModalService } from 'ngx-bootstrap/modal';
 
 
 
@@ -42,11 +44,12 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TooltipModule.forRoot(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions())
   ],
-  providers: [],
+  providers: [BsModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
